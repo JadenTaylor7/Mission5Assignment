@@ -1,7 +1,7 @@
 ﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 // for details on configuring this project to bundle and minify static web assets.
 
-// Write your JavaScript code.
+//For Index.cshtml
 document.addEventListener('DOMContentLoaded', (event) => {
     let slideIndex = 0;
 
@@ -24,5 +24,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const slider = document.querySelector('.slider');
         slider.style.transform = `translateX(${-slideIndex * 100}%)`;
     }
+});
+
+
+
+//For Calculate.cshtml
+$(document).ready(function () {
+    $('#calculate').click(function () {
+        var hours = $('#hours').val();
+        var rate = $('#rate').val();
+
+        if (hours > 0) {
+            var total = hours * rate;
+            $('#total').val(total);
+        } else {
+            alert("Please enter a positive number of hours.");
+        }
+    });
 });
 

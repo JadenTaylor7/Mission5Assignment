@@ -18,7 +18,7 @@ namespace Mission5Assignment.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Calculate()
         {
             return View();
         }
